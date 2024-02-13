@@ -6,3 +6,4 @@ final topAnimesState = Atom<List<HomeModel>>([]);
 final updatedAnimesState = Atom<List<HomeModel>>([]);
 final lastAnimesState = Atom<List<HomeModel>>([]);
 final dubladoAnimesState = Atom<List<HomeModel>>([]);
+final legendadosAnimesState = Atom<List<HomeModel>>([]);

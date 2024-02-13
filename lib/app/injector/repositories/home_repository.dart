@@ -6,4 +6,5 @@ abstract class HomeRepository {
   Future<List<HomeModel>> getTopAnimes();
   Future<List<HomeModel>> getUpdatedAnimes();
   Future<List<HomeModel>> getDubladosAnimes();
+  Future<List<HomeModel>> getLegendadosAnimes();
 }

@@ -28,3 +28,8 @@ Future<List<HomeModel>> fecthDubladosAnimes() async {
   final repository = injector.get<HomeRepository>();
   return dubladoAnimesState.value = await repository.getDubladosAnimes();
 }
+
+Future<List<HomeModel>> fecthLegendadosAnimes() async {
+  final repository = injector.get<HomeRepository>();
+  return legendadosAnimesState.value = await repository.getLegendadosAnimes();
+}

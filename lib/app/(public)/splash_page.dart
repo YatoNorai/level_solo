@@ -20,6 +20,7 @@ class _SplashPageState extends State<SplashPage> {
     fecthTopAnimes();
     fecthUpdatedAnimes();
     fecthTendingAnimes();
+    fecthLegendadosAnimes();
   }
 
   @override

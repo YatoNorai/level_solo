@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
         final animesTop = topAnimesState.value;
         final animesUpdated = updatedAnimesState.value;
         final animesTrending = trendingAnimesState.value;
+        final animesLegendados = legendadosAnimesState.value;
         return animesDublados.isEmpty
             ? const Center(
                 child: CircularProgressIndicator(),
@@ -71,6 +72,15 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.only(top: 20.0),
                       sliver: SliverToBoxAdapter(
                         child: ContentList(
+                          title: 'Em lançamento',
+                          contentList: animesTrending,
+                        ),
+                      ),
+                    ),
+                    SliverPadding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      sliver: SliverToBoxAdapter(
+                        child: ContentList(
                           title: 'Animes dublados',
                           contentList: animesDublados,
                         ),
@@ -80,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.only(top: 20.0),
                       sliver: SliverToBoxAdapter(
                         child: ContentList(
-                          isOriginals: true,
+                          isTop: true,
                           title: 'Top animes',
                           contentList: animesTop,
                         ),
@@ -93,6 +103,16 @@ class _HomePageState extends State<HomePage> {
                           // isOriginals: true,
                           title: 'Ultimos atualizados',
                           contentList: animesUpdated,
+                        ),
+                      ),
+                    ),
+                    SliverPadding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      sliver: SliverToBoxAdapter(
+                        child: ContentList(
+                          // isOriginals: true,
+                          title: 'Legendados',
+                          contentList: animesLegendados,
                         ),
                       ),
                     ),

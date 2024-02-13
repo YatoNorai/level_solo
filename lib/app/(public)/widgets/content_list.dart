@@ -7,13 +7,13 @@ import 'package:level_solo/app/injector/models/home_model.dart';
 class ContentList extends StatelessWidget {
   final String title;
   final List<HomeModel> contentList;
-  final bool isOriginals;
+  final bool isTop;
 
   const ContentList({
     super.key,
     required this.title,
     required this.contentList,
-    this.isOriginals = false,
+    this.isTop = false,
   });
 
   @override
@@ -50,7 +50,7 @@ class ContentList extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: isOriginals ? 320.0 : 200.0,
+            height: isTop ? 320.0 : 200.0,
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(
                 vertical: 12.0,
@@ -64,8 +64,8 @@ class ContentList extends StatelessWidget {
                   onTap: () => print(content.animeLink),
                   child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                    height: isOriginals ? 320.0 : 200.0,
-                    width: isOriginals ? 160.0 : 110.0,
+                    height: isTop ? 320.0 : 200.0,
+                    width: isTop ? 160.0 : 110.0,
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 71, 69, 69),
                       borderRadius: BorderRadius.circular(5),
